@@ -3,6 +3,7 @@ import LandingPage from './LandingPage';
 import CreateAccount from './CreateAccount';
 import Login from './Login';
 import Profile from './Profile';
+import ScrollToTop from './ScrollToTop';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Home, ChevronLeft, ChevronRight } from 'lucide-react';
@@ -49,6 +50,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white flex flex-col items-center justify-center p-4 relative">
       <BrowserRouter>
+        <ScrollToTop />
         <div className="w-full max-w-[375px] h-[812px] max-h-[85vh] bg-white border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.12)] overflow-y-auto relative flex flex-col hide-scrollbar mb-16">
           <Routes>
             <Route path="/" element={<LandingPage />} />
